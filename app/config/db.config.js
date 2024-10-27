@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
 
-// MongoDB URL
 const dbUrl = 'mongodb://localhost:27017/rudra';
 
-// Function to connect to MongoDB
 const connectDB = async () => {
   try {
     await mongoose.connect(dbUrl, {
@@ -13,7 +11,7 @@ const connectDB = async () => {
     console.log("Successfully connected to MongoDB.");
   } catch (err) {
     console.error("Connection error:", err);
-    process.exit(1); // Exit process with failure
+    process.exit(1); 
   }
 };
 
